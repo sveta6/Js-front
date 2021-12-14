@@ -101,7 +101,6 @@ export default {
   border-color: #bd2b85;
 }
 
-label input {
-}
+
 </style>
 
