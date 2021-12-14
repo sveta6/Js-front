@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import {doRegistration} from '@/netClient/dataService';
+import {doRegistration} from '@/netClient/todoService';
 
 export default {
   name:"RegistrationPage",
