@@ -19,7 +19,7 @@ export default {
 
 
 <style scoped>
-.info {
+/* .info {
   box-shadow: 3px 3px 3px #fcfcfc;
   margin: auto;
   background-color: #d485ba;
@@ -49,5 +49,5 @@ h2 {
   font-size: 26px;
   color: #ffffff;
   text-shadow: 2px 4px  #bd2b85;
-}
+} */
 </style>

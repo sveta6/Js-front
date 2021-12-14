@@ -49,7 +49,7 @@ export default {
 
 
 <style scoped>
-.Forms input {
+/* .Forms input {
   float: right;
   outline: none;
   text-align: center;
@@ -100,6 +100,6 @@ export default {
 }
 
 label input {
-}
+} */
 </style>
 

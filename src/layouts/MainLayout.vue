@@ -19,12 +19,12 @@ export default {
 </script>
 
 <style scoped>
-.main-layout {
+/* .main-layout {
   width: 100%;
   max-width: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-}
+} */
 </style>

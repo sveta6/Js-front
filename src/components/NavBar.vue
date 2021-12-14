@@ -33,8 +33,8 @@ export default{
 </script>
 
 <style scoped>
-a.router-link-active, li.router-link-active>a {
-  color: #35C0CD;
+/* a.router-link-active, li.router-link-active>a {
+  color: #bd2b85;
 }
 .menu{
   float: right;
@@ -43,8 +43,8 @@ a.router-link-active, li.router-link-active>a {
   display: flex;
 }
 .header {
-  background: linear-gradient(#025167, #057D9F);
-  box-shadow: 10px 5px 10px black;
+  background: linear-gradient(#670229, #d485ba);
+  box-shadow: 10px 5px 10px rgb(131, 86, 86);
   height: 100px;
   z-index: 3;
   position: fixed;
@@ -68,7 +68,7 @@ header ul li a {
 }
 nav li:hover,
 nav li:active{
-  background-color: #63ADD0;
+  background-color: #d485ba;
   cursor: pointer;
-}
+} */
 </style

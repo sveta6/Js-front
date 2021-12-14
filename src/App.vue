@@ -29,7 +29,7 @@ export default{
 
 
 <style>
-.link {
+/* .link {
   font-size: 18px;
   color: #ffffff;
 }
@@ -70,5 +70,5 @@ body {
 img {
   border-radius: 14px 14px 14px 14px;
   border: 4px solid #bd2b85;
-}
+} */
 </style>
