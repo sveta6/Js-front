@@ -8,7 +8,8 @@ const routes = [
    path: '/',
    name: 'Home',
     meta: {
-      title: 'Главная страница'
+      title: 'Список дел ',
+      layout:'main-layout'
      },
      component: () => import('@/pages/Home.vue')
    },
@@ -16,16 +17,45 @@ const routes = [
      path: '/info',
      name: 'Info',
      meta: {
-       title: 'Информация'
+       title: 'Информация',
+       layout:'main-layout'
      },
      component: () => import('@/pages/Info.vue')
-   }
+   },
+   {
+    path: '/login',
+    name: 'Login',
+    meta: {
+      title: 'Вход',
+      layout:'auth-layout'
+    },
+    component: () => import('@/pages/LoginPage.vue')
+  },
+  {
+    path: '/registration',
+    name: 'Registration',
+    meta: {
+      title: 'Зарегистрируйся',
+      layout:'main-layout'
+    },
+    component: () => import('@/pages/RegistrationPage.vue')
+  }
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  const { token } = localStorage;
+  if (token || to.name === 'login' || to.name === 'registration') {
+      next();
+  } else{
+      next('/login')
+  }
+
 })
 
 export default router

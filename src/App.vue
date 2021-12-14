@@ -1,18 +1,32 @@
 <template>
   <div id="app">
-    <router-link class="link" to="/">
+    <component :is="layout">
+      <!-- <router-link class="link" to="/">
     to home
     </router-link>
     <a>|</a>
     <router-link class="link" to="/Info">
     to info
-    </router-link>
-    <router-view />
+    </router-link>-->
+      <router-view />
+    </component>
   </div>
 </template>
 
 <script>
+import AuthLayout from "@/layouts/AuthLayout";
+import MainLayout from "@/layouts/MainLayout";
+export default{
+    name: 'App',
+    components: { MainLayout, AuthLayout},
+    computed:{
+      layout(){
+        return this.$route.meta?.layout || 'main-layout'
+      }
+    }
+  }
 </script>
+
 
 <style>
 .link {
@@ -55,6 +69,6 @@ body {
 
 img {
   border-radius: 14px 14px 14px 14px;
-  border: 4px solid  #bd2b85;
+  border: 4px solid #bd2b85;
 }
 </style>
