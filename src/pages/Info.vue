@@ -1,7 +1,7 @@
 <template>
   <div class="cards">
     <InfoCard/>
-    <FormCard/>
+   <FormCard/>
   </div>
 </template>
 

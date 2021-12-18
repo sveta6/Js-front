@@ -2,21 +2,21 @@
   <div class="info">
     <img src="../assets/1.jpg" width="200" height="280" />
     <h1 class="First_Name">
-      SVeta Buzdalova</h1>
+      SVeta Buzdalova
+    </h1>
     <h2>BSBO-07-19</h2>
     <p class="mes">
-      Hello, nice to meet you on my localhost. This page is under
-      constuction. Hope you'll like my websource :3
+      Hello, nice to meet you on my localhost. This page is under constuction.
+      Hope you'll like my websource :3
     </p>
   </div>
 </template>
 
 <script>
 export default {
-  name:"InfoCard"
-}
+  name: "InfoCard",
+};
 </script>
-
 
 <style scoped>
 /* .info {

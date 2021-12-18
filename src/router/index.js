@@ -4,42 +4,43 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
-{
-   path: '/',
-   name: 'Home',
-    meta: {
-      title: 'Список дел ',
-      layout:'main-layout'
-     },
-     component: () => import('@/pages/Home.vue')
-   },
-   {
-     path: '/info',
-     name: 'Info',
-     meta: {
-       title: 'Информация',
-       layout:'main-layout'
-     },
-     component: () => import('@/pages/Info.vue')
-   },
-   {
-    path: '/login',
-    name: 'Login',
-    meta: {
-      title: 'Вход',
-      layout:'auth-layout'
+    {
+        path: '/',
+        name: 'home',
+        meta: {
+            title: 'Список дел',
+            layout: 'main-layout'
+        },
+        component: ()=>import('@/pages/Home.vue')
     },
-    component: () => import('@/pages/LoginPage.vue')
-  },
-  {
-    path: '/registration',
-    name: 'Registration',
-    meta: {
-      title: 'Зарегистрируйся',
-      layout:'main-layout'
+    {
+        path: '/info',
+        name: 'info',
+        meta: {
+            title: 'Информация',
+            layout: 'main-layout'
+        },
+        component: ()=>import('@/pages/Info.vue')
     },
-    component: () => import('@/pages/RegistrationPage.vue')
-  }
+    {
+        path: '/login',
+        name: 'login',
+        meta: {
+            title: 'Вход',
+            layout: 'auth-layout'
+        },
+        component: ()=>import('@/pages/LoginPage.vue')
+    },
+    {
+        path: '/registration',
+        name: 'registration',
+        meta: {
+            title: 'Регистрация',
+            layout: 'auth-layout'
+        },
+        component: ()=>import('@/pages/RegistrationPage.vue')
+    },
+  
 ]
 
 const router = new VueRouter({
@@ -49,13 +50,12 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  const { token } = localStorage;
-  if (token || to.name === 'login' || to.name === 'registration') {
-      next();
-  } else{
-      next('/login')
-  }
+    const { token } = localStorage;
+    if (token || to.name === 'login' || to.name === 'registration') {
+        next();
+    } else{
+        next('/login')
+    }
 
 })
-
 export default router

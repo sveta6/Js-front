@@ -3,7 +3,7 @@
         <div class="page-title">
              {{$route.meta.title}}
         </div>
-        <div class="page-comtainer">
+        <div class="page-container">
             <router-view/>
         </div>
     </div>
@@ -17,12 +17,12 @@ export default {
 </script>
 
 <style scoped>
-/* .auth-layout{
+ .auth-layout{
     width:100%;
     max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-} */
+} 
 </style>

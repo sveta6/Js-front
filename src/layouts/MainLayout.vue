@@ -1,30 +1,46 @@
 <template>
   <div class="main-layout">
-      <NavBar/>
+    <NavBar />
     <div class="page-title">
-         {{$route.meta.title}}
+      {{ $route.meta.title }}
     </div>
-    <div class="page-comtainer">
+    <ul class="page-container">
       <router-view />
-    </div>
+    </ul>
   </div>
 </template>
 
 <script>
-import NavBar from "@/components/NavBar"
+import NavBar from "@/components/NavBar";
 export default {
   name: "MainLayout",
-  components:{NavBar}
+  components: { NavBar },
 };
 </script>
 
 <style scoped>
 /* .main-layout {
   width: 100%;
-  max-width: 800px;
+  display: grid;
+
+   grid-template-rows: repeat(2, 1fr);
+
+  grid-gap: 20px;
+
+}  */
+ul {
+  
+}
+.page-container{
+ grid-template-columns: 500px 20% min-content max-content 1fr 2fr auto;
+  grid-template-rows: auto minmax(50px, 50vh) 2em;
+}
+ .main-layout {
+  width: 100%;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-} */
+}
 </style>
